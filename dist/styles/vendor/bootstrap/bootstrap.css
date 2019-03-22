@@ -1427,9 +1427,6 @@ pre {
     border-color: #fac9a9;
     outline: 0;
     box-shadow: 0 0 0 0.2rem rgba(244, 125, 48, 0.25); }
-  .form-control::-webkit-input-placeholder {
-    color: #6c757d;
-    opacity: 1; }
   .form-control::-moz-placeholder {
     color: #6c757d;
     opacity: 1; }
@@ -3382,12 +3379,10 @@ tbody.collapse.show {
 
 @media (min-width: 576px) {
   .card-columns {
-    -webkit-column-count: 3;
-       -moz-column-count: 3;
-            column-count: 3;
-    -webkit-column-gap: 1.25rem;
-       -moz-column-gap: 1.25rem;
-            column-gap: 1.25rem; }
+    -moz-column-count: 3;
+         column-count: 3;
+    -moz-column-gap: 1.25rem;
+         column-gap: 1.25rem; }
     .card-columns .card {
       display: inline-block;
       width: 100%; } }
