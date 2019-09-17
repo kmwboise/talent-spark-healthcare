@@ -1,0 +1,68 @@
+//Vendor
+@import "vendor/bootstrap/bootstrap";
+@import "node_modules/aos/src/sass/aos";
+
+//Partials
+@import "partials/styleguide";
+
+//Global
+@import "partials/navigation";
+@import "partials/header";
+@import "partials/footer";
+@import "partials/breadcrumbs";
+
+@import "partials/two-column";
+@import "partials/clip-paths";
+@import "partials/client";
+@import "partials/email-signup";
+@import "partials/services";
+
+
+.media {
+    flex: 1;
+}
+
+.border-after {
+    &:after {
+        content: " ";
+        display: block;
+        border-bottom: 2px solid $primary;
+        padding-top: 1rem;
+        width: 300px;
+        position: absolute;
+        left: 50%;
+        right: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+
+figure {
+    margin: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

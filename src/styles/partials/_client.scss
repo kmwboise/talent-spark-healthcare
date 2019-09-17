@@ -1,0 +1,38 @@
+.client {
+    .media {
+        flex: auto;
+        margin-bottom: 2rem;
+    }
+    .c-client {
+        &__logos {
+            > div {
+                flex-basis: 50%;
+                text-align: center;
+                padding-left: 20px;
+                padding-right: 20px;
+                @include media-breakpoint-up(md) { 
+                    flex-basis: 25%;
+                    padding-left: 45px;
+                    padding-right: 45px;
+                }
+            }
+        }
+        &__icon {
+            &-building {
+                padding: 12px 18px;
+            }
+            &-candidate {
+                padding: 12px 15px;
+            }
+            &-house {
+                padding: 12px 14px;
+            }
+            &-heart {
+                padding: 13px 14px;
+            }
+            &-leaf {
+                padding: 14px;
+            }
+        }
+    }
+}

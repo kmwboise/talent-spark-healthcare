@@ -1,0 +1,71 @@
+.clip-bg {
+    position: relative;
+    &:before {
+        @include media-breakpoint-up(md) { 
+            content: " ";
+            display: block;
+            position: absolute;
+            background-color: $gray-100;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            //clip-path: polygon(-23% 0, 20% 100%, 75% 100%, 32% 0%);
+        }
+    }
+    
+    #about &{
+        &:before {
+            clip-path: polygon(-23% 0, 20% 100%, 75% 100%, 32% 0%);
+        }
+    }
+    
+    #testimonial &{
+        &:before {
+            clip-path: polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%);
+        }
+    }
+    
+    #services &{
+        &:before {
+            clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+        }
+    }
+    
+    #contact &{
+        &:before {
+            clip-path: polygon(25% 0%, 100% 0%, 100% 100%, 0% 100%);
+        }
+    }
+}
+
+.clip {
+     position: relative;
+    @include media-breakpoint-up(md) { 
+        clip-path: polygon(25% 0%, 100% 0%, 100% 100%, 25% 100%, 11% 50%);
+    }
+    &:before {
+        @include media-breakpoint-up(md) { 
+            content: " ";
+            display: block;
+            position: absolute;
+            background-color: rgba(244,125,48,.5);
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            clip-path: polygon(19% 0, 0% 50%, 25% 100%, 36% 100%, 21% 50%, 36% 0, 50% 0, 34% 0, 48% 0, 34% 50%, 48% 100%, 83% 100%, 70% 50%, 83% 0);
+            @media screen and (-ms-high-contrast: active), screen and (-ms-high-contrast: none) {  
+                background-color: transparent;
+            }
+        }
+    }
+     
+}
+
+/* Microsoft Edge Browser 12+ (All) - @supports method */
+@supports (-ms-ime-align:auto) {
+    .clip:before {
+        background-color: transparent;
+    }
+}

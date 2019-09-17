@@ -1,0 +1,90 @@
+header {
+    padding-bottom: 110px;
+    //background-image: url(../images/marquee.jpg);
+    background-position: center center;
+    background-size: cover;
+    //clip-path: polygon(0% 0%, 100% 0%, 100% 50%, 50% 70%, 0% 55%);
+    position: relative;
+    @include media-breakpoint-up(md) {
+        margin-top: -114px;
+        padding-top: 9rem;
+        padding-bottom: calc(19rem - 166px);
+    }
+
+    .container {
+        z-index: 2;
+    }
+
+    h1, p, hr{
+        animation: fadein 4s;
+    }
+
+    .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background-color: rgba(125,105,86,.2);
+        height: 100%;
+        //z-index: 1;
+    }
+
+    #home & {
+        background:
+        linear-gradient(135deg, rgba(0,0,0,.4) 0%,rgba(0,0,0,.4) 100%),
+         url(/dist/images/Mtns-and-lake-Image.jpg);
+        background-position: center 114%;
+        clip-path: polygon(0% 0%, 100% 0%, 100% 62%, 50% 70%, 0% 65%);
+        padding-bottom: calc(19rem - 100px);
+        padding-top: 3rem;
+
+        @include media-breakpoint-up(md) {
+            padding-top: 12rem;
+            padding-bottom: calc(19rem - 59px);
+            clip-path: polygon(0% 0%, 100% 0%, 100% 50%, 50% 70%, 0% 55%);
+        }
+
+        @media screen and (-ms-high-contrast: active), screen and (-ms-high-contrast: none) {
+           max-height: 425px;
+        }
+    }
+
+    #about & {
+        background-image: url(/dist/images/about-talent-spark-recruiting.jpg);
+        //background-position: 50% 81%;
+    }
+
+    #testimonial & {
+        background-image: url(/dist/images/clients-of-talent-spark.jpg);
+        background-position: center center;
+    }
+
+    #services & {
+        background-image: url(/dist/images/services-talent-spark.jpg);
+        //background-position: 50% 66%;
+    }
+
+    #contact & {
+        background-image: url(/dist/images/contact-talent-spark.jpg);
+        background-position: 50% 26%;
+    }
+}
+
+@keyframes fadein {
+    from {
+        opacity: 0;
+        transform: translateY(-50%);
+    }
+    to   {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+/* Microsoft Edge Browser 12+ (All) - @supports method */
+@supports (-ms-ime-align:auto) {
+    #home header {
+        max-height: 425px;
+    }
+}

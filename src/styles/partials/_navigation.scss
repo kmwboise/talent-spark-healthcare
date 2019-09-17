@@ -1,0 +1,17 @@
+nav {
+    a {
+        color: white;
+    }
+    
+    .navbar-toggle {
+        i{
+            font-size: 30px;
+        }
+    }
+}
+
+@include media-breakpoint-up(md) { 
+    .navbar {
+        padding: 0;
+    }
+}
